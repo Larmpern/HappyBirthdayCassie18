@@ -1,0 +1,173 @@
+body
+{
+    overflow: hidden;
+    margin: 0px;
+    position: absolute;
+}
+button
+{
+    position: absolute;
+}
+#WorldNameTag
+{
+    transform: translateX(-50%);
+    position: absolute;
+    font-size: 160px;
+    background-color: rgb(249, 249, 249);
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    top:-10%;
+    left: 50%;
+    border-radius: 15px;
+}
+
+#UpButton,
+#DownButton,
+#RightButton,
+#LeftButton {
+    background-color: rgb(0, 195, 255);
+    width: 76px; /* Set equal width */
+    height: 76px; /* Set equal height */
+    font-size: 50px; /* Adjust font size to fit */
+    border-radius: 50%; /* Make it circular */
+    border: 2px solid black; /* Black outline */
+}
+
+#UpButton:hover,
+#DownButton:hover,
+#RightButton:hover,
+#LeftButton:hover
+{
+    background-color: rgb(190, 240, 255);
+}
+
+@keyframes ContainerAnimation{
+
+    from{
+       top:-80%;
+    }
+    to{
+       top: 0%;
+    }
+   
+   }
+
+.Container{
+    position: absolute;
+
+    width: 30%;
+    height: 30%;
+    left: 50%;
+    animation: ContainerAnimation 2s linear;
+    background-color: aquamarine;
+    transform: translate(-50%, 50%);
+}
+
+/*This will be the option buttons for the Beginning*/
+.OptionButton{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    width: 30%;
+    height: 20%;
+    border-style: solid;
+    border-radius: 20%;
+    border-width: 5px;
+    margin: 5%;
+}
+.OptionButton.Yes-Sound{
+    background-color: rgb(0, 255, 102);
+}
+.OptionButton.Yes-Sound:hover{
+    background-color: rgb(124, 255, 177);
+}
+.OptionButton.No-Sound{
+    background-color: rgb(255, 0, 0);
+}
+.OptionButton.No-Sound:hover{
+    background-color: rgb(255, 124, 124);
+}
+
+.Box{
+    position: absolute !important;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+    transition: transform 1s linear 0s;
+}
+
+/*This will be for the background for the second  */
+.Background2{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    object-fit:contain;
+    background-repeat: no-repeat;
+    z-index: -2;
+    transition: transform 1s linear 0s;
+}
+
+.PasswordContainer{
+    position: absolute;
+    left: 50%;
+    background-color: white;
+    width: 20vw;
+    height: 20vw;
+    z-index: -2;
+    border-radius: 20%;
+    transform: translate(-50%, 50%);
+}
+
+input{
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%);
+    width: 60%;
+}
+
+.WrongBox{
+    position: absolute;
+    width: 15vw;
+    height: 4vw;
+    opacity: 0;
+    z-index: 100;
+    transform: translate(-50%);
+    left: 50%;
+
+    background-color: rgb(255, 109, 109);
+}
+
+.RightBox{
+    position: absolute;
+    width: 15vw;
+    height: 4vw;
+    z-index: 100;
+    transform: translate(-50%);
+    left: 50%;
+    opacity: 0;
+    background-color: rgb(154, 240, 117);
+}
+
+.HintBox1{
+    opacity: 0;
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    background: rgb(255, 255, 255);
+    border: 5px solid black;
+    line-height: 150%;
+    transform: translate(-50%);
+}
+
+.HintBox2{
+    opacity: 0;
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    background: rgb(255, 255, 255);
+    border: 5px solid black;
+    line-height: 150%;
+}

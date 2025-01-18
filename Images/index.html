@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Cassie</title>
+    <link rel="stylesheet" href="Style2.css">
+    <script type="module" src="./main.js"></script>
+</head>
+<body>
+    <script type="module" src="./main.js"></script>
+    <div class="Container" style="z-index: 4; margin: 0;">
+        <h1 style="font-size: 2vw;">Would You Like There To Be Sound?</h1>
+        <button class="Yes-Sound OptionButton" id="yesButton" style="bottom: 0%;">Yes</button>
+        <button class="No-Sound OptionButton" id="NoButton" style="right: 10%; bottom: 0%;" >No</button>
+     </div>
+
+      <!--Screen1-->
+        
+    <div class="Box MoveBoxLeft" style="z-index: 3; margin: 0;"></div>
+    <div class="Box MoveBoxRight" style="left: 50%; z-index: 3; margin: 0;"></div>
+    <audio src="Music.mp3" loop style="display: none; position: absolute;" id="Music"></audio>
+    <audio src="Wrong.MP3" style="display: none;" id="WrongSound"></audio>
+    <audio src="Right.MP3" style="display: none;" id="RightSound"></audio>
+
+
+    <!--Screen 2-->
+    <div class="Background2 MoveBackground2Up" style="background-image: linear-gradient(rgb(0, 174, 255), rgb(96, 205, 255)); z-index: 1;"></div>
+    <div class="Background2 MoveBackground2Down" style="top: 50%; background-image: linear-gradient(rgb(96, 205, 255), rgb(188, 234, 255)); z-index: 1; "></div>
+    <div class="PasswordContainer" style="z-index: 1;">
+        <h1 style="position: absolute; width: 100%; height: 70%; text-align: center; font-size: 3vw;">Guess The<br>Password</h1>
+        <input placeholder="Password.."></input>
+    </div>
+
+    <div class="WrongBox" style="z-index: 1;">
+        <h1 style="font-size: 1.3vw; text-align: center; line-height: 200%;">Wrong Answer Try Again</h1>
+    </div>
+    <div class="RightBox" style="z-index: 1;">
+        <h1 style="font-size: 2vw; text-align: center; line-height: 50%;">Correct</h1>
+    </div>
+
+
+    <div class="HintBox1" style="left: 50%; bottom: 10%; z-index: 1;">
+        <h2 style="vertical-align: text-top; position: absolute; top: -20%; left: 20%; text-align: center;" >How old are<br> you today?</h1>
+    </div>
+
+
+    <div class="HintBox2" style="left: 0%; bottom: 70%; z-index: 1;">
+        <h1 style=" text-align: center; line-height: 0%;">Its a number</h1>
+    </div>
+
+
+
+      
+    <div id="Buttons">
+        <button id="UpButton" style="top:38%; left:60px;">↑</button>
+        <button id="DownButton" style="top:52%; left:60px;">↓</button>
+        <button id="RightButton" style="top:45%;left: 120px;">→</button>
+        <button id="LeftButton" style="top:45%; left: 0px;">←</button>
+    </div>
+    <div>
+        <p id="WorldNameTag">May</p>
+    </div>
+</body>
+</html>

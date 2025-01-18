@@ -1,0 +1,251 @@
+html, body {
+    position: relative !important;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+    
+}
+@keyframes ContainerAnimation{
+
+ from{
+    top:-80%;
+ }
+ to{
+    top: 0%;
+ }
+
+}
+
+.Container{
+    position: absolute;
+
+    width: 30%;
+    height: 30%;
+    left: 50%;
+    animation: ContainerAnimation 2s linear;
+    background-color: aquamarine;
+    transform: translate(-50%, 50%);
+    z-index: 10;
+}
+
+.Container h1{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 50%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
+    font-size:xx-large;
+    top: 10%;
+
+}
+
+/*This will be for the background for the second  */
+.Background2{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    object-fit:contain;
+    background-repeat: no-repeat;
+    z-index: -2;
+    transition: transform 1s linear 0s;
+}
+
+.Box{
+    position: absolute !important;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+    transition: transform 1s linear 0s;
+}
+
+
+input{
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%);
+    width: 60%;
+}
+
+.PasswordContainer{
+    position: absolute;
+    left: 50%;
+    background-color: white;
+    width: 20vw;
+    height: 20vw;
+    z-index: -2;
+    border-radius: 20%;
+    transform: translate(-50%, 50%);
+}
+
+/*This will be the option buttons for the Beginning*/
+.OptionButton{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    width: 30%;
+    height: 20%;
+    border-style: solid;
+    border-radius: 20%;
+    border-width: 5px;
+    margin: 5%;
+}
+.OptionButton.Yes-Sound{
+    background-color: rgb(0, 255, 102);
+}
+.OptionButton.Yes-Sound:hover{
+    background-color: rgb(124, 255, 177);
+}
+.OptionButton.No-Sound{
+    background-color: rgb(255, 0, 0);
+}
+.OptionButton.No-Sound:hover{
+    background-color: rgb(255, 124, 124);
+}
+
+/*Making the box for when the player gets it right or wrong*/
+.WrongBox{
+    position: absolute;
+    width: 15vw;
+    height: 4vw;
+    opacity: 0;
+    z-index: 100;
+    transform: translate(-50%);
+    left: 50%;
+
+    background-color: rgb(255, 109, 109);
+}
+
+.RightBox{
+    position: absolute;
+    width: 15vw;
+    height: 4vw;
+    z-index: 100;
+    transform: translate(-50%);
+    left: 50%;
+    opacity: 0;
+    background-color: rgb(154, 240, 117);
+}
+
+/*This will be for the hint boxes*/
+
+
+.HintBox1{
+    opacity: 0;
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    background: rgb(255, 255, 255);
+    border: 5px solid black;
+    line-height: 150%;
+    transform: translate(-50%);
+}
+
+.HintBox2{
+    opacity: 0;
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    background: rgb(255, 255, 255);
+    border: 5px solid black;
+    line-height: 150%;
+}
+
+.Background3{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    object-fit:contain;
+    background-repeat: no-repeat;
+    z-index: 3;
+    transition: transform 1s linear 0s;
+}
+
+h3{
+    position: absolute;
+    width: 40%;
+    height: 44%;
+    background-color: aliceblue;
+    border: 5px solid black;
+    z-index: 4;
+    text-align: center;
+    padding: 10px;
+    padding-top: 20px;
+    transform: translate(-50%);
+    left: 50%;
+    padding-bottom: 10px;
+    font-size: 3vw;
+}
+
+h4{
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    z-index: 4;
+    text-align: center;
+    transform: translate(-50%);
+    left: 50%;
+    font-size: 5vw;
+    visibility:hidden;
+}
+
+button.Hello{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    border: 5px solid black;
+    z-index: 4;
+    text-align: center;
+    padding: 2px; 
+    background-color: rgb(154, 250, 154);
+    right: 0%;
+    bottom: 0%;
+    font-weight: 1000;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button:hover{
+    background-color: rgb(193, 244, 193);
+}
+
+#my-canvas{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: -100;
+}
+
+.heart { 
+    position: relative; 
+    width: 100px; 
+    height: 500px; 
+    right: -5%;
+    bottom: -50%;
+    z-index: 100;
+    visibility: hidden;
+} 
+
+.heart:before, .heart:after { 
+    position: absolute; 
+    content: ""; 
+    left: 100px; 
+    top: 0; 
+    width: 100px; 
+    height: 180px; 
+    background:red;
+    border-radius: 50px 50px 0 0; 
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%; 
+} 
+
+.heart:after { 
+    left: 0; 
+    transform: rotate(45deg); 
+    transform-origin :100% 100%; 
+}
+
